@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".PrincipalActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textViewIC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Razão Insulina/Carboidrato I/C"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textViewCategoria"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Categoria do Alimento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/razaoIC" />
+
+        <TextView
+            android:id="@+id/textViewAlimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="Alimento"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/novo_categoria" />
+
+        <TextView
+            android:id="@+id/textViewMedida"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="12dp"
+            android:text="Medida Caseira"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/alimento" />
+
+        <TextView
+            android:id="@+id/itens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Itens Adicionados"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/medida" />
+
+        <EditText
+            android:id="@+id/razaoIC"
+            android:layout_width="49dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="number"
+            android:textColorLink="?android:attr/textColorLink"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIC" />
+
+        <Spinner
+            android:id="@+id/novo_categoria"
+            android:layout_width="224dp"
+            android:layout_height="34dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCategoria" />
+
+        <Button
+            android:id="@+id/botao_OK_IC"
+            android:layout_width="60dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="8dp"
+            android:text="Ok"
+            android:visibility="visible"
+            app:layout_constraintStart_toEndOf="@+id/razaoIC"
+            app:layout_constraintTop_toBottomOf="@+id/textViewIC"
+            tools:clickable="false" />
+
+        <Spinner
+            android:id="@+id/alimento"
+            android:layout_width="224dp"
+            android:layout_height="37dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAlimento" />
+
+        <Spinner
+            android:id="@+id/medida"
+            android:layout_width="113dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMedida" />
+
+        <Spinner
+            android:id="@+id/quantidade"
+            android:layout_width="60dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toEndOf="@+id/medida"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMedida" />
+
+        <Button
+            android:id="@+id/botao_adicionar"
+            android:layout_width="103dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="4dp"
+            android:text="Adicionar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/quantidade"
+            app:layout_constraintTop_toBottomOf="@+id/textViewMedida" />
+
+        <Button
+            android:id="@+id/botao_ok_categoria"
+            android:layout_width="72dp"
+            android:layout_height="43dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp"
+            android:text="Ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/novo_categoria"
+            app:layout_constraintTop_toBottomOf="@+id/textViewCategoria" />
+
+        <Button
+            android:id="@+id/botao_ok_alimento"
+            android:layout_width="74dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:text="Ok"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/alimento"
+            app:layout_constraintTop_toBottomOf="@+id/textViewAlimento" />
+
+        <Button
+            android:id="@+id/botao_limpar"
+            android:layout_width="78dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:text="Limpar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lista" />
+
+        <Button
+            android:id="@+id/botao_calcular"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="4dp"
+            android:text="Calcular"
+            app:layout_constraintStart_toEndOf="@+id/botao_limpar"
+            app:layout_constraintTop_toBottomOf="@+id/lista" />
+
+        <GridView
+            android:id="@+id/lista"
+            android:layout_width="180dp"
+            android:layout_height="125dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/itens" />
+
+        <Button
+            android:id="@+id/button_novo"
+            android:layout_width="62dp"
+            android:layout_height="38dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="24dp"
+            android:text="Novo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.644"
+            app:layout_constraintStart_toEndOf="@+id/textViewIC"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
